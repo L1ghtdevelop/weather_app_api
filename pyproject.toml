@@ -1,0 +1,56 @@
+[project]
+name = "weather-app-api-v2"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "L1ghtdevelop", email = "niirokalostas1234@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "basedpyright>=1.40.2",
+    "fastapi>=0.163.1",
+    "pydantic-settings>=2.16.3",
+    "ruff>=0.17.5",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+weather-app-api-v2 = "weather_app_api_v2:main"
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.ruff]
+line-length = 80
+indent-width = 4
+exclude = [
+    ".git",
+    ".venv",
+    "__pycache__",
+    "build",
+    "dist",
+]
+
+[tool.ruff.lint]
+ignore = [
+    "D100",
+    "D101",
+    "D102",
+    "ANN101",
+    "ANN202",
+    "CPY001",
+    "TC003",
+    "ERA001",
+]
+
+select = ["ALL"]
+
+fixable = ["ALL"]
+unfixable = []
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
